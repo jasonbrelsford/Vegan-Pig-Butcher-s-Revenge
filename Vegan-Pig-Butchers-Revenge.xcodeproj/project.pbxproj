@@ -31,7 +31,7 @@
 		C9633FFB18AC2B0000F2E432 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9633FD018AC2AFF00F2E432 /* Foundation.framework */; };
 		C9633FFC18AC2B0000F2E432 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9633FD418AC2AFF00F2E432 /* UIKit.framework */; };
 		C963400418AC2B0000F2E432 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C963400218AC2B0000F2E432 /* InfoPlist.strings */; };
-		C963400618AC2B0000F2E432 /* FlappyBirdCloneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C963400518AC2B0000F2E432 /* FlappyBirdCloneTests.m */; };
+		C963400618AC2B0000F2E432 /* Vegan-Pig-Butchers-Revenge-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C963400518AC2B0000F2E432 /* Vegan-Pig-Butchers-Revenge-Tests.m */; };
 		C963401718AC39DD00F2E432 /* Skyline.png in Resources */ = {isa = PBXBuildFile; fileRef = C963401518AC39DD00F2E432 /* Skyline.png */; };
 		C963401818AC39DD00F2E432 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = C963401618AC39DD00F2E432 /* Ground.png */; };
 /* End PBXBuildFile section */
@@ -78,7 +78,7 @@
 		C9633FF918AC2B0000F2E432 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C963400118AC2B0000F2E432 /* Vegan-Pig-Butchers-RevengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Vegan-Pig-Butchers-RevengeTests-Info.plist"; sourceTree = "<group>"; };
 		C963400318AC2B0000F2E432 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C963400518AC2B0000F2E432 /* FlappyBirdCloneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlappyBirdCloneTests.m; sourceTree = "<group>"; };
+		C963400518AC2B0000F2E432 /* Vegan-Pig-Butchers-Revenge-Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Vegan-Pig-Butchers-Revenge-Tests.m"; sourceTree = "<group>"; };
 		C963401518AC39DD00F2E432 /* Skyline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skyline.png; sourceTree = "<group>"; };
 		C963401618AC39DD00F2E432 /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,7 +183,7 @@
 		C9633FFF18AC2B0000F2E432 /* Vegan-Pig-Butchers-Revenge-Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C963400518AC2B0000F2E432 /* FlappyBirdCloneTests.m */,
+				C963400518AC2B0000F2E432 /* Vegan-Pig-Butchers-Revenge-Tests.m */,
 				C963400018AC2B0000F2E432 /* Supporting Files */,
 			);
 			name = "Vegan-Pig-Butchers-Revenge-Tests";
@@ -317,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C963400618AC2B0000F2E432 /* FlappyBirdCloneTests.m in Sources */,
+				C963400618AC2B0000F2E432 /* Vegan-Pig-Butchers-Revenge-Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
