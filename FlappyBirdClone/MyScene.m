@@ -160,7 +160,7 @@ static NSInteger const kVerticalPipeGap = 100;
 -(void)spawnPipes {
     SKNode* pipePair = [SKNode node];
     pipePair.position = CGPointMake( self.frame.size.width + _pipeTexture1.size.width, 0 );
-    pipePair.zPosition = 10;
+    pipePair.zPosition = -10;
     
     CGFloat y = arc4random() % (NSInteger)( self.frame.size.height / 3 );
     
