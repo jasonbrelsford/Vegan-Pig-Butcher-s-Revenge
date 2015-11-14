@@ -2,6 +2,7 @@
 
 #import "ViewController.h"
 #import "MyScene.h"
+#import <iAd/iAd.h>
 
 @implementation ViewController
 
@@ -20,6 +21,14 @@
     
     // Present the scene.
     [skView presentScene:scene];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    ADBannerView *adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, 320, 50)];
+    [self.view addSubview:adView];
 }
 
 - (BOOL)shouldAutorotate
