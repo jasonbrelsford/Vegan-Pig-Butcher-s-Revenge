@@ -82,6 +82,24 @@ static NSInteger const kVerticalPipeGap = 100;
             [sprite runAction:moveGroundSpritesForever];
             [_moving addChild:sprite];
         }
+        // Create clouds
+        
+        SKTexture* cloudTexture = [SKTexture textureWithImageNamed:@"Clouds"];
+        cloudTexture.filteringMode = SKTextureFilteringNearest;
+        
+        SKAction* movecloudSprite = [SKAction moveByX:-cloudTexture.size.width*2 y:0 duration:0.1 * cloudTexture.size.width*2];
+        SKAction* resetcloudSprite = [SKAction moveByX:cloudTexture.size.width*2 y:0 duration:0];
+        SKAction* movecloudSpritesForever = [SKAction repeatActionForever:[SKAction sequence:@[movecloudSprite, resetcloudSprite]]];
+        
+        for( int i = 0; i < 2 + self.frame.size.width / ( cloudTexture.size.width * 2 ); ++i ) {
+            SKSpriteNode* sprite = [SKSpriteNode spriteNodeWithTexture:cloudTexture];
+            [sprite setScale:2.0];
+            sprite.zPosition = -50;
+            sprite.position = CGPointMake(i * sprite.size.width, sprite.size.height / 2 + groundTexture.size.height * 2);
+            [sprite runAction:movecloudSpritesForever];
+            [_moving addChild:sprite];
+        }
+
         
         // Create skyline
         
@@ -95,7 +113,7 @@ static NSInteger const kVerticalPipeGap = 100;
         for( int i = 0; i < 2 + self.frame.size.width / ( skylineTexture.size.width * 2 ); ++i ) {
             SKSpriteNode* sprite = [SKSpriteNode spriteNodeWithTexture:skylineTexture];
             [sprite setScale:2.0];
-            sprite.zPosition = -20;
+            sprite.zPosition = 400;
             sprite.position = CGPointMake(i * sprite.size.width, sprite.size.height / 2 + groundTexture.size.height * 2);
             [sprite runAction:moveSkylineSpritesForever];
             [_moving addChild:sprite];
