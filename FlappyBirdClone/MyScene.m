@@ -87,7 +87,7 @@ static NSInteger const kVerticalPipeGap = 100;
         SKTexture* cloudTexture = [SKTexture textureWithImageNamed:@"Clouds"];
         cloudTexture.filteringMode = SKTextureFilteringNearest;
         
-        SKAction* movecloudSprite = [SKAction moveByX:-cloudTexture.size.width*2 y:0 duration:0.1 * cloudTexture.size.width*2];
+        SKAction* movecloudSprite = [SKAction moveByX:-cloudTexture.size.width*2 y:0 duration:10 * cloudTexture.size.width*2];
         SKAction* resetcloudSprite = [SKAction moveByX:cloudTexture.size.width*2 y:0 duration:0];
         SKAction* movecloudSpritesForever = [SKAction repeatActionForever:[SKAction sequence:@[movecloudSprite, resetcloudSprite]]];
         
@@ -160,7 +160,7 @@ static NSInteger const kVerticalPipeGap = 100;
 -(void)spawnPipes {
     SKNode* pipePair = [SKNode node];
     pipePair.position = CGPointMake( self.frame.size.width + _pipeTexture1.size.width, 0 );
-    pipePair.zPosition = -10;
+    pipePair.zPosition = 10;
     
     CGFloat y = arc4random() % (NSInteger)( self.frame.size.height / 3 );
     
