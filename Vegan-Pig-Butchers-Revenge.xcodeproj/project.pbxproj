@@ -23,7 +23,7 @@
 		5AF8CE361BF9629000510915 /* Gameoversound-chip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE351BF9627500510915 /* Gameoversound-chip.caf */; };
 		5AF8CE371BF9640A00510915 /* Flapping.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE2D1BF7CC3500510915 /* Flapping.caf */; };
 		5AF8CE3B1BF9856A00510915 /* VeganPigSoundtrack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE3A1BF9856300510915 /* VeganPigSoundtrack.caf */; };
-		5AFB602B1BF99F6000701FDE /* Buildings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB602A1BF99F6000701FDE /* Buildings.png */; };
+		5AFB602B1BF99F6000701FDE /* BuildingsSkyline.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB602A1BF99F6000701FDE /* BuildingsSkyline.png */; };
 		5AFB602D1BF99F7000701FDE /* Ribs.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB602C1BF99F7000701FDE /* Ribs.png */; };
 		C9633FD118AC2AFF00F2E432 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9633FD018AC2AFF00F2E432 /* Foundation.framework */; };
 		C9633FD318AC2AFF00F2E432 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9633FD218AC2AFF00F2E432 /* CoreGraphics.framework */; };
@@ -73,7 +73,7 @@
 		5AF8CE331BF95DEA00510915 /* Gameoversound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gameoversound.caf; sourceTree = "<group>"; };
 		5AF8CE351BF9627500510915 /* Gameoversound-chip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gameoversound-chip.caf"; sourceTree = "<group>"; };
 		5AF8CE3A1BF9856300510915 /* VeganPigSoundtrack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeganPigSoundtrack.caf; sourceTree = "<group>"; };
-		5AFB602A1BF99F6000701FDE /* Buildings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buildings.png; sourceTree = "<group>"; };
+		5AFB602A1BF99F6000701FDE /* BuildingsSkyline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuildingsSkyline.png; sourceTree = "<group>"; };
 		5AFB602C1BF99F7000701FDE /* Ribs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ribs.png; sourceTree = "<group>"; };
 		C9633FCD18AC2AFF00F2E432 /* Vegan-Pig-Butchers-Revenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vegan-Pig-Butchers-Revenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9633FD018AC2AFF00F2E432 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -187,7 +187,7 @@
 				C9633FE418AC2AFF00F2E432 /* Main_iPhone.storyboard */,
 				C9633FE718AC2AFF00F2E432 /* Main_iPad.storyboard */,
 				C9633FEA18AC2AFF00F2E432 /* ViewController.h */,
-				5AFB602A1BF99F6000701FDE /* Buildings.png */,
+				5AFB602A1BF99F6000701FDE /* BuildingsSkyline.png */,
 				C9633FEB18AC2B0000F2E432 /* ViewController.m */,
 				C9633FED18AC2B0000F2E432 /* MyScene.h */,
 				C9633FEE18AC2B0000F2E432 /* MyScene.m */,
@@ -318,7 +318,7 @@
 				5AF8CE301BF7D33C00510915 /* Crash1.caf in Resources */,
 				5AD673631BF44A78000AC829 /* Pipe2bak.png in Resources */,
 				5AF8CE1F1BF7747600510915 /* Pipe1~ipad.png in Resources */,
-				5AFB602B1BF99F6000701FDE /* Buildings.png in Resources */,
+				5AFB602B1BF99F6000701FDE /* BuildingsSkyline.png in Resources */,
 				5AF8CE2A1BF7BBA600510915 /* Pipe2.png in Resources */,
 				5AFB602D1BF99F7000701FDE /* Ribs.png in Resources */,
 				5AD673611BF44A6F000AC829 /* Pipe1bak.png in Resources */,
