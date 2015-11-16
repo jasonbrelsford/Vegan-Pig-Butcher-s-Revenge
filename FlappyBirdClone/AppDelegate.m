@@ -1,9 +1,6 @@
 //
-//  AppDelegate.m
-//  FlappyBirdClone
-//
-//  Created by Matthias Gall on 10/02/14.
-//  Copyright (c) 2014 Matthias Gall. All rights reserved.
+//Jason Brelsford
+//Copyright Brelsford Software
 //
 
 #import "AppDelegate.h"

@@ -11,12 +11,20 @@
 		5AD6735F1BF43EBE000AC829 /* Bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6735E1BF43EBE000AC829 /* Bird1.png */; };
 		5AD673611BF44A6F000AC829 /* Pipe1bak.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD673601BF44A6F000AC829 /* Pipe1bak.png */; };
 		5AD673631BF44A78000AC829 /* Pipe2bak.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD673621BF44A78000AC829 /* Pipe2bak.png */; };
-		5AD673671BF44DC8000AC829 /* blip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AD673641BF44DC8000AC829 /* blip.caf */; };
-		5AD673681BF44DC8000AC829 /* brickhit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AD673651BF44DC8000AC829 /* brickhit.caf */; };
-		5AD673691BF44DC8000AC829 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AD673661BF44DC8000AC829 /* gameover.caf */; };
 		5AF8CE181BF76C3500510915 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF8CE171BF76C3500510915 /* iAd.framework */; };
-		5AF8CE1F1BF7747600510915 /* Pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE1D1BF7747600510915 /* Pipe1.png */; };
-		5AF8CE201BF7747600510915 /* Pipe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE1E1BF7747600510915 /* Pipe2.png */; };
+		5AF8CE1F1BF7747600510915 /* Pipe1~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE1D1BF7747600510915 /* Pipe1~ipad.png */; };
+		5AF8CE201BF7747600510915 /* Pipe2~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE1E1BF7747600510915 /* Pipe2~ipad.png */; };
+		5AF8CE261BF7B9E500510915 /* Clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE251BF7B9E500510915 /* Clouds.png */; };
+		5AF8CE281BF7BB9500510915 /* Pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE271BF7BB9500510915 /* Pipe1.png */; };
+		5AF8CE2A1BF7BBA600510915 /* Pipe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE291BF7BBA600510915 /* Pipe2.png */; };
+		5AF8CE2C1BF7C85C00510915 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF8CE2B1BF7C85C00510915 /* GameKit.framework */; };
+		5AF8CE301BF7D33C00510915 /* Crash1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE2F1BF7D33C00510915 /* Crash1.caf */; };
+		5AF8CE341BF95E0000510915 /* Gameoversound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE331BF95DEA00510915 /* Gameoversound.caf */; };
+		5AF8CE361BF9629000510915 /* Gameoversound-chip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE351BF9627500510915 /* Gameoversound-chip.caf */; };
+		5AF8CE371BF9640A00510915 /* Flapping.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE2D1BF7CC3500510915 /* Flapping.caf */; };
+		5AF8CE3B1BF9856A00510915 /* VeganPigSoundtrack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE3A1BF9856300510915 /* VeganPigSoundtrack.caf */; };
+		5AFB602B1BF99F6000701FDE /* Buildings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB602A1BF99F6000701FDE /* Buildings.png */; };
+		5AFB602D1BF99F7000701FDE /* Ribs.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB602C1BF99F7000701FDE /* Ribs.png */; };
 		C9633FD118AC2AFF00F2E432 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9633FD018AC2AFF00F2E432 /* Foundation.framework */; };
 		C9633FD318AC2AFF00F2E432 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9633FD218AC2AFF00F2E432 /* CoreGraphics.framework */; };
 		C9633FD518AC2AFF00F2E432 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9633FD418AC2AFF00F2E432 /* UIKit.framework */; };
@@ -53,13 +61,20 @@
 		5AD6735E1BF43EBE000AC829 /* Bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird1.png; sourceTree = "<group>"; };
 		5AD673601BF44A6F000AC829 /* Pipe1bak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe1bak.png; sourceTree = "<group>"; };
 		5AD673621BF44A78000AC829 /* Pipe2bak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe2bak.png; sourceTree = "<group>"; };
-		5AD673641BF44DC8000AC829 /* blip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blip.caf; sourceTree = "<group>"; };
-		5AD673651BF44DC8000AC829 /* brickhit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = brickhit.caf; sourceTree = "<group>"; };
-		5AD673661BF44DC8000AC829 /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.caf; sourceTree = "<group>"; };
-		5AD6736A1BF45CF8000AC829 /* funky.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = funky.caf; sourceTree = "<group>"; };
 		5AF8CE171BF76C3500510915 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		5AF8CE1D1BF7747600510915 /* Pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe1.png; sourceTree = "<group>"; };
-		5AF8CE1E1BF7747600510915 /* Pipe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe2.png; sourceTree = "<group>"; };
+		5AF8CE1D1BF7747600510915 /* Pipe1~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pipe1~ipad.png"; sourceTree = "<group>"; };
+		5AF8CE1E1BF7747600510915 /* Pipe2~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pipe2~ipad.png"; sourceTree = "<group>"; };
+		5AF8CE251BF7B9E500510915 /* Clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clouds.png; sourceTree = "<group>"; };
+		5AF8CE271BF7BB9500510915 /* Pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe1.png; sourceTree = "<group>"; };
+		5AF8CE291BF7BBA600510915 /* Pipe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe2.png; sourceTree = "<group>"; };
+		5AF8CE2B1BF7C85C00510915 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		5AF8CE2D1BF7CC3500510915 /* Flapping.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Flapping.caf; sourceTree = "<group>"; };
+		5AF8CE2F1BF7D33C00510915 /* Crash1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Crash1.caf; sourceTree = "<group>"; };
+		5AF8CE331BF95DEA00510915 /* Gameoversound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gameoversound.caf; sourceTree = "<group>"; };
+		5AF8CE351BF9627500510915 /* Gameoversound-chip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gameoversound-chip.caf"; sourceTree = "<group>"; };
+		5AF8CE3A1BF9856300510915 /* VeganPigSoundtrack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeganPigSoundtrack.caf; sourceTree = "<group>"; };
+		5AFB602A1BF99F6000701FDE /* Buildings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buildings.png; sourceTree = "<group>"; };
+		5AFB602C1BF99F7000701FDE /* Ribs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ribs.png; sourceTree = "<group>"; };
 		C9633FCD18AC2AFF00F2E432 /* Vegan-Pig-Butchers-Revenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vegan-Pig-Butchers-Revenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9633FD018AC2AFF00F2E432 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9633FD218AC2AFF00F2E432 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,6 +110,7 @@
 				C9633FD318AC2AFF00F2E432 /* CoreGraphics.framework in Frameworks */,
 				C9633FD518AC2AFF00F2E432 /* UIKit.framework in Frameworks */,
 				C9633FD718AC2AFF00F2E432 /* SpriteKit.framework in Frameworks */,
+				5AF8CE2C1BF7C85C00510915 /* GameKit.framework in Frameworks */,
 				C9633FD118AC2AFF00F2E432 /* Foundation.framework in Frameworks */,
 				5AF8CE181BF76C3500510915 /* iAd.framework in Frameworks */,
 			);
@@ -135,6 +151,7 @@
 		C9633FCF18AC2AFF00F2E432 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AF8CE2B1BF7C85C00510915 /* GameKit.framework */,
 				5AF8CE171BF76C3500510915 /* iAd.framework */,
 				C9633FD018AC2AFF00F2E432 /* Foundation.framework */,
 				C9633FD218AC2AFF00F2E432 /* CoreGraphics.framework */,
@@ -148,23 +165,29 @@
 		C9633FD818AC2AFF00F2E432 /* Vegan-Pig-Butchers-Revenge */ = {
 			isa = PBXGroup;
 			children = (
+				5AF8CE2F1BF7D33C00510915 /* Crash1.caf */,
 				C963401518AC39DD00F2E432 /* Skyline.png */,
 				C963401618AC39DD00F2E432 /* Ground.png */,
+				5AF8CE351BF9627500510915 /* Gameoversound-chip.caf */,
 				5AD6735E1BF43EBE000AC829 /* Bird1.png */,
+				5AF8CE331BF95DEA00510915 /* Gameoversound.caf */,
 				C9633FE118AC2AFF00F2E432 /* AppDelegate.h */,
-				5AF8CE1D1BF7747600510915 /* Pipe1.png */,
-				5AF8CE1E1BF7747600510915 /* Pipe2.png */,
+				5AF8CE1D1BF7747600510915 /* Pipe1~ipad.png */,
+				5AF8CE2D1BF7CC3500510915 /* Flapping.caf */,
+				5AF8CE1E1BF7747600510915 /* Pipe2~ipad.png */,
+				5AF8CE291BF7BBA600510915 /* Pipe2.png */,
+				5AF8CE3A1BF9856300510915 /* VeganPigSoundtrack.caf */,
+				5AF8CE271BF7BB9500510915 /* Pipe1.png */,
 				5AD6735C1BF43EB2000AC829 /* Bird2.png */,
-				5AD6736A1BF45CF8000AC829 /* funky.caf */,
+				5AF8CE251BF7B9E500510915 /* Clouds.png */,
 				5AD673601BF44A6F000AC829 /* Pipe1bak.png */,
 				C9633FE218AC2AFF00F2E432 /* AppDelegate.m */,
-				5AD673641BF44DC8000AC829 /* blip.caf */,
-				5AD673651BF44DC8000AC829 /* brickhit.caf */,
-				5AD673661BF44DC8000AC829 /* gameover.caf */,
 				5AD673621BF44A78000AC829 /* Pipe2bak.png */,
+				5AFB602C1BF99F7000701FDE /* Ribs.png */,
 				C9633FE418AC2AFF00F2E432 /* Main_iPhone.storyboard */,
 				C9633FE718AC2AFF00F2E432 /* Main_iPad.storyboard */,
 				C9633FEA18AC2AFF00F2E432 /* ViewController.h */,
+				5AFB602A1BF99F6000701FDE /* Buildings.png */,
 				C9633FEB18AC2B0000F2E432 /* ViewController.m */,
 				C9633FED18AC2B0000F2E432 /* MyScene.h */,
 				C9633FEE18AC2B0000F2E432 /* MyScene.m */,
@@ -250,8 +273,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "Matthias Gall";
+				ORGANIZATIONNAME = "Jason Brelsford";
 				TargetAttributes = {
+					C9633FCC18AC2AFF00F2E432 = {
+						DevelopmentTeam = LMW3S3LWP4;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
 					C9633FF718AC2B0000F2E432 = {
 						TestTargetID = C9633FCC18AC2AFF00F2E432;
 					};
@@ -281,19 +315,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF8CE301BF7D33C00510915 /* Crash1.caf in Resources */,
 				5AD673631BF44A78000AC829 /* Pipe2bak.png in Resources */,
-				5AF8CE1F1BF7747600510915 /* Pipe1.png in Resources */,
+				5AF8CE1F1BF7747600510915 /* Pipe1~ipad.png in Resources */,
+				5AFB602B1BF99F6000701FDE /* Buildings.png in Resources */,
+				5AF8CE2A1BF7BBA600510915 /* Pipe2.png in Resources */,
+				5AFB602D1BF99F7000701FDE /* Ribs.png in Resources */,
 				5AD673611BF44A6F000AC829 /* Pipe1bak.png in Resources */,
 				C963401718AC39DD00F2E432 /* Skyline.png in Resources */,
-				5AD673691BF44DC8000AC829 /* gameover.caf in Resources */,
+				5AF8CE341BF95E0000510915 /* Gameoversound.caf in Resources */,
+				5AF8CE3B1BF9856A00510915 /* VeganPigSoundtrack.caf in Resources */,
+				5AF8CE371BF9640A00510915 /* Flapping.caf in Resources */,
 				5AD6735D1BF43EB2000AC829 /* Bird2.png in Resources */,
-				5AF8CE201BF7747600510915 /* Pipe2.png in Resources */,
+				5AF8CE201BF7747600510915 /* Pipe2~ipad.png in Resources */,
+				5AF8CE361BF9629000510915 /* Gameoversound-chip.caf in Resources */,
+				5AF8CE261BF7B9E500510915 /* Clouds.png in Resources */,
 				C9633FF318AC2B0000F2E432 /* Images.xcassets in Resources */,
 				C963401818AC39DD00F2E432 /* Ground.png in Resources */,
 				C9633FE918AC2AFF00F2E432 /* Main_iPad.storyboard in Resources */,
 				C9633FE618AC2AFF00F2E432 /* Main_iPhone.storyboard in Resources */,
-				5AD673681BF44DC8000AC829 /* brickhit.caf in Resources */,
-				5AD673671BF44DC8000AC829 /* blip.caf in Resources */,
+				5AF8CE281BF7BB9500510915 /* Pipe1.png in Resources */,
 				5AD6735F1BF43EBE000AC829 /* Bird1.png in Resources */,
 				C9633FDD18AC2AFF00F2E432 /* InfoPlist.strings in Resources */,
 			);
@@ -453,12 +494,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlappyBirdClone/Vegan-Pig-Butchers-Revenge-Prefix.pch";
 				INFOPLIST_FILE = "FlappyBirdClone/Vegan-Pig-Butchers-Revenge-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.digitalbreed.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BrelsfordSoftware.Vegan-Pig-Butchers-Revenge";
 				PRODUCT_NAME = "Vegan-Pig-Butchers-Revenge";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -468,12 +513,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlappyBirdClone/Vegan-Pig-Butchers-Revenge-Prefix.pch";
 				INFOPLIST_FILE = "FlappyBirdClone/Vegan-Pig-Butchers-Revenge-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.digitalbreed.${PRODUCT_NAME:rfc1034identifier}";
+				INSTALL_OWNER = "$(USER)";
+				"INSTALL_OWNER[sdk=*]" = "$(USER)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BrelsfordSoftware.Vegan-Pig-Butchers-Revenge";
 				PRODUCT_NAME = "Vegan-Pig-Butchers-Revenge";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

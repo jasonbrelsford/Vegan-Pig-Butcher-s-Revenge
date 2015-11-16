@@ -7,6 +7,7 @@
     SKColor* _skyColor;
     SKTexture* _pipeTexture1;
     SKTexture* _pipeTexture2;
+    SKTexture* _ribsTexture;
     SKAction* _movePipesAndRemove;
     SKNode* _moving;
     SKNode* _pipes;
@@ -23,12 +24,17 @@ static const uint32_t worldCategory = 1 << 1;
 static const uint32_t pipeCategory = 1 << 2;
 static const uint32_t scoreCategory = 1 << 3;
 
+
+
 static NSInteger const kVerticalPipeGap = 100;
 //static NSInteger const kVerticalPipeGap = 100;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
+        
+        SKAction *playSFX = [SKAction playSoundFileNamed:@"VeganPigSoundtrack.caf" waitForCompletion:NO];
+        [self runAction:playSFX];
         
         _canRestart = NO;
         
@@ -50,6 +56,7 @@ static NSInteger const kVerticalPipeGap = 100;
         birdTexture2.filteringMode = SKTextureFilteringNearest;
         
         SKAction* flap = [SKAction repeatActionForever:[SKAction animateWithTextures:@[birdTexture1, birdTexture2] timePerFrame:0.2]];
+        
         
         _bird = [SKSpriteNode spriteNodeWithTexture:birdTexture1];
         [_bird setScale:2.0];
@@ -82,6 +89,25 @@ static NSInteger const kVerticalPipeGap = 100;
             [sprite runAction:moveGroundSpritesForever];
             [_moving addChild:sprite];
         }
+        
+        // Create ribs
+        
+        SKTexture* ribsTexture = [SKTexture textureWithImageNamed:@"Ribs"];
+        ribsTexture.filteringMode = SKTextureFilteringNearest;
+        
+        SKAction* moveribsSprite = [SKAction moveByX:-ribsTexture.size.width*2 y:0 duration:0.02 * ribsTexture.size.width*2];
+        SKAction* resetribsSprite = [SKAction moveByX:ribsTexture.size.width*2 y:0 duration:0];
+        SKAction* moveribsSpritesForever = [SKAction repeatActionForever:[SKAction sequence:@[moveribsSprite, resetribsSprite]]];
+        
+        for( int i = 0; i < 2 + self.frame.size.width / ( ribsTexture.size.width * 2 ); ++i ) {
+            // Create the sprite
+            SKSpriteNode* sprite = [SKSpriteNode spriteNodeWithTexture:ribsTexture];
+            [sprite setScale:2.0];
+            sprite.position = CGPointMake(i * sprite.size.width, sprite.size.height / 2);
+            [sprite runAction:moveribsSpritesForever];
+            [_moving addChild:sprite];
+        }
+
         // Create clouds
         
         SKTexture* cloudTexture = [SKTexture textureWithImageNamed:@"Clouds"];
@@ -113,7 +139,7 @@ static NSInteger const kVerticalPipeGap = 100;
         for( int i = 0; i < 2 + self.frame.size.width / ( skylineTexture.size.width * 2 ); ++i ) {
             SKSpriteNode* sprite = [SKSpriteNode spriteNodeWithTexture:skylineTexture];
             [sprite setScale:2.0];
-            sprite.zPosition = 400;
+            sprite.zPosition = 98;
             sprite.position = CGPointMake(i * sprite.size.width, sprite.size.height / 2 + groundTexture.size.height * 2);
             [sprite runAction:moveSkylineSpritesForever];
             [_moving addChild:sprite];
@@ -146,9 +172,10 @@ static NSInteger const kVerticalPipeGap = 100;
         SKAction* spawnThenDelayForever = [SKAction repeatActionForever:spawnThenDelay];
         [self runAction:spawnThenDelayForever];
         
-        // Initialize label and create a label which holds the score
+        
+        // Initialize label for score
         _score = 0;
-        _scoreLabelNode = [SKLabelNode labelNodeWithFontNamed:@"MarkerFelt-Wide"];
+        _scoreLabelNode = [SKLabelNode labelNodeWithFontNamed:@"DINCondensed-Bold"];
         _scoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), 3 * self.frame.size.height / 4 );
         _scoreLabelNode.zPosition = 100;
         _scoreLabelNode.text = [NSString stringWithFormat:@"%ld", (long)_score];
@@ -164,10 +191,11 @@ static NSInteger const kVerticalPipeGap = 100;
     
     CGFloat y = arc4random() % (NSInteger)( self.frame.size.height / 3 );
     
-    SKSpriteNode* pipe1 = [SKSpriteNode spriteNodeWithTexture:_pipeTexture1];
+    SKSpriteNode *pipe1 = [SKSpriteNode spriteNodeWithTexture:_pipeTexture1];
     [pipe1 setScale:2];
     pipe1.position = CGPointMake( 0, y );
-    pipe1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:pipe1.size];
+//    pipe1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:pipe1.size];
+    pipe1.physicsBody = [SKPhysicsBody bodyWithTexture:_pipeTexture1 alphaThreshold:(CGFLOAT_MIN) size:pipe1.size];
     pipe1.physicsBody.dynamic = NO;
     pipe1.physicsBody.categoryBitMask = pipeCategory;
     pipe1.physicsBody.contactTestBitMask = birdCategory;
@@ -223,10 +251,13 @@ static NSInteger const kVerticalPipeGap = 100;
     /* Called when a touch begins */
     if( _moving.speed > 0 ) {
         _bird.physicsBody.velocity = CGVectorMake(0, 0);
-        [_bird.physicsBody applyImpulse:CGVectorMake(0, 4)];
+        [_bird.physicsBody applyImpulse:CGVectorMake(0, 6)];
     } else if( _canRestart ) {
         [self resetScene];
     }
+    SKAction *playSFX = [SKAction playSoundFileNamed:@"Flapping.caf" waitForCompletion:NO];
+    [self runAction:playSFX];
+    
 
 }
 
@@ -267,7 +298,7 @@ CGFloat clamp(CGFloat min, CGFloat max, CGFloat value) {
             [_bird runAction:[SKAction rotateByAngle:M_PI * _bird.position.y * 0.01 duration:_bird.position.y * 0.003] completion:^{
                 _bird.speed = 0;
             }];
-            {SKAction *playSFX = [SKAction playSoundFileNamed:@"gameover.caf" waitForCompletion:NO];
+            {SKAction *playSFX = [SKAction playSoundFileNamed:@"Gameoversound-chip.caf" waitForCompletion:NO];
                 [self runAction:playSFX];
             }
             
