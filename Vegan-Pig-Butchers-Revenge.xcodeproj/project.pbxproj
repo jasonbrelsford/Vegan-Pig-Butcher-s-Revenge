@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5AD6735D1BF43EB2000AC829 /* Bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6735C1BF43EB2000AC829 /* Bird2.png */; };
-		5AD6735F1BF43EBE000AC829 /* Bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6735E1BF43EBE000AC829 /* Bird1.png */; };
+		5A5D854E1BFADA5200587564 /* Bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D854C1BFADA5200587564 /* Bird1.png */; };
+		5A5D854F1BFADA5200587564 /* Bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D854D1BFADA5200587564 /* Bird2.png */; };
+		5A5D85511BFAE09400587564 /* Skyline-ribs.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D85501BFAE09400587564 /* Skyline-ribs.png */; };
+		5AD6735D1BF43EB2000AC829 /* Bird2-old-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6735C1BF43EB2000AC829 /* Bird2-old-2.png */; };
+		5AD6735F1BF43EBE000AC829 /* Bird1-old-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6735E1BF43EBE000AC829 /* Bird1-old-1.png */; };
 		5AD673611BF44A6F000AC829 /* Pipe1bak.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD673601BF44A6F000AC829 /* Pipe1bak.png */; };
 		5AD673631BF44A78000AC829 /* Pipe2bak.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD673621BF44A78000AC829 /* Pipe2bak.png */; };
 		5AF8CE181BF76C3500510915 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF8CE171BF76C3500510915 /* iAd.framework */; };
@@ -23,7 +26,7 @@
 		5AF8CE361BF9629000510915 /* Gameoversound-chip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE351BF9627500510915 /* Gameoversound-chip.caf */; };
 		5AF8CE371BF9640A00510915 /* Flapping.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE2D1BF7CC3500510915 /* Flapping.caf */; };
 		5AF8CE3B1BF9856A00510915 /* VeganPigSoundtrack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8CE3A1BF9856300510915 /* VeganPigSoundtrack.caf */; };
-		5AFB602B1BF99F6000701FDE /* BuildingsSkyline.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB602A1BF99F6000701FDE /* BuildingsSkyline.png */; };
+		5AFB602B1BF99F6000701FDE /* Skyline-new.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB602A1BF99F6000701FDE /* Skyline-new.png */; };
 		5AFB602D1BF99F7000701FDE /* Ribs.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB602C1BF99F7000701FDE /* Ribs.png */; };
 		C9633FD118AC2AFF00F2E432 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9633FD018AC2AFF00F2E432 /* Foundation.framework */; };
 		C9633FD318AC2AFF00F2E432 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9633FD218AC2AFF00F2E432 /* CoreGraphics.framework */; };
@@ -57,8 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5AD6735C1BF43EB2000AC829 /* Bird2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird2.png; sourceTree = "<group>"; };
-		5AD6735E1BF43EBE000AC829 /* Bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird1.png; sourceTree = "<group>"; };
+		5A5D854C1BFADA5200587564 /* Bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird1.png; sourceTree = "<group>"; };
+		5A5D854D1BFADA5200587564 /* Bird2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird2.png; sourceTree = "<group>"; };
+		5A5D85501BFAE09400587564 /* Skyline-ribs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Skyline-ribs.png"; sourceTree = "<group>"; };
+		5AD6735C1BF43EB2000AC829 /* Bird2-old-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bird2-old-2.png"; sourceTree = "<group>"; };
+		5AD6735E1BF43EBE000AC829 /* Bird1-old-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bird1-old-1.png"; sourceTree = "<group>"; };
 		5AD673601BF44A6F000AC829 /* Pipe1bak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe1bak.png; sourceTree = "<group>"; };
 		5AD673621BF44A78000AC829 /* Pipe2bak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe2bak.png; sourceTree = "<group>"; };
 		5AF8CE171BF76C3500510915 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -73,7 +79,7 @@
 		5AF8CE331BF95DEA00510915 /* Gameoversound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gameoversound.caf; sourceTree = "<group>"; };
 		5AF8CE351BF9627500510915 /* Gameoversound-chip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gameoversound-chip.caf"; sourceTree = "<group>"; };
 		5AF8CE3A1BF9856300510915 /* VeganPigSoundtrack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VeganPigSoundtrack.caf; sourceTree = "<group>"; };
-		5AFB602A1BF99F6000701FDE /* BuildingsSkyline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuildingsSkyline.png; sourceTree = "<group>"; };
+		5AFB602A1BF99F6000701FDE /* Skyline-new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Skyline-new.png"; sourceTree = "<group>"; };
 		5AFB602C1BF99F7000701FDE /* Ribs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ribs.png; sourceTree = "<group>"; };
 		C9633FCD18AC2AFF00F2E432 /* Vegan-Pig-Butchers-Revenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vegan-Pig-Butchers-Revenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9633FD018AC2AFF00F2E432 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -169,8 +175,11 @@
 				C963401518AC39DD00F2E432 /* Skyline.png */,
 				C963401618AC39DD00F2E432 /* Ground.png */,
 				5AF8CE351BF9627500510915 /* Gameoversound-chip.caf */,
-				5AD6735E1BF43EBE000AC829 /* Bird1.png */,
+				5AD6735E1BF43EBE000AC829 /* Bird1-old-1.png */,
+				5A5D854C1BFADA5200587564 /* Bird1.png */,
+				5A5D854D1BFADA5200587564 /* Bird2.png */,
 				5AF8CE331BF95DEA00510915 /* Gameoversound.caf */,
+				5A5D85501BFAE09400587564 /* Skyline-ribs.png */,
 				C9633FE118AC2AFF00F2E432 /* AppDelegate.h */,
 				5AF8CE1D1BF7747600510915 /* Pipe1~ipad.png */,
 				5AF8CE2D1BF7CC3500510915 /* Flapping.caf */,
@@ -178,7 +187,7 @@
 				5AF8CE291BF7BBA600510915 /* Pipe2.png */,
 				5AF8CE3A1BF9856300510915 /* VeganPigSoundtrack.caf */,
 				5AF8CE271BF7BB9500510915 /* Pipe1.png */,
-				5AD6735C1BF43EB2000AC829 /* Bird2.png */,
+				5AD6735C1BF43EB2000AC829 /* Bird2-old-2.png */,
 				5AF8CE251BF7B9E500510915 /* Clouds.png */,
 				5AD673601BF44A6F000AC829 /* Pipe1bak.png */,
 				C9633FE218AC2AFF00F2E432 /* AppDelegate.m */,
@@ -187,7 +196,7 @@
 				C9633FE418AC2AFF00F2E432 /* Main_iPhone.storyboard */,
 				C9633FE718AC2AFF00F2E432 /* Main_iPad.storyboard */,
 				C9633FEA18AC2AFF00F2E432 /* ViewController.h */,
-				5AFB602A1BF99F6000701FDE /* BuildingsSkyline.png */,
+				5AFB602A1BF99F6000701FDE /* Skyline-new.png */,
 				C9633FEB18AC2B0000F2E432 /* ViewController.m */,
 				C9633FED18AC2B0000F2E432 /* MyScene.h */,
 				C9633FEE18AC2B0000F2E432 /* MyScene.m */,
@@ -318,7 +327,8 @@
 				5AF8CE301BF7D33C00510915 /* Crash1.caf in Resources */,
 				5AD673631BF44A78000AC829 /* Pipe2bak.png in Resources */,
 				5AF8CE1F1BF7747600510915 /* Pipe1~ipad.png in Resources */,
-				5AFB602B1BF99F6000701FDE /* BuildingsSkyline.png in Resources */,
+				5A5D85511BFAE09400587564 /* Skyline-ribs.png in Resources */,
+				5AFB602B1BF99F6000701FDE /* Skyline-new.png in Resources */,
 				5AF8CE2A1BF7BBA600510915 /* Pipe2.png in Resources */,
 				5AFB602D1BF99F7000701FDE /* Ribs.png in Resources */,
 				5AD673611BF44A6F000AC829 /* Pipe1bak.png in Resources */,
@@ -326,7 +336,8 @@
 				5AF8CE341BF95E0000510915 /* Gameoversound.caf in Resources */,
 				5AF8CE3B1BF9856A00510915 /* VeganPigSoundtrack.caf in Resources */,
 				5AF8CE371BF9640A00510915 /* Flapping.caf in Resources */,
-				5AD6735D1BF43EB2000AC829 /* Bird2.png in Resources */,
+				5A5D854E1BFADA5200587564 /* Bird1.png in Resources */,
+				5AD6735D1BF43EB2000AC829 /* Bird2-old-2.png in Resources */,
 				5AF8CE201BF7747600510915 /* Pipe2~ipad.png in Resources */,
 				5AF8CE361BF9629000510915 /* Gameoversound-chip.caf in Resources */,
 				5AF8CE261BF7B9E500510915 /* Clouds.png in Resources */,
@@ -335,7 +346,8 @@
 				C9633FE918AC2AFF00F2E432 /* Main_iPad.storyboard in Resources */,
 				C9633FE618AC2AFF00F2E432 /* Main_iPhone.storyboard in Resources */,
 				5AF8CE281BF7BB9500510915 /* Pipe1.png in Resources */,
-				5AD6735F1BF43EBE000AC829 /* Bird1.png in Resources */,
+				5A5D854F1BFADA5200587564 /* Bird2.png in Resources */,
+				5AD6735F1BF43EBE000AC829 /* Bird1-old-1.png in Resources */,
 				C9633FDD18AC2AFF00F2E432 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

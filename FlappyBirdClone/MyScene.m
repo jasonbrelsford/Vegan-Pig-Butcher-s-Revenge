@@ -26,7 +26,7 @@ static const uint32_t scoreCategory = 1 << 3;
 
 
 
-static NSInteger const kVerticalPipeGap = 100;
+static NSInteger const kVerticalPipeGap = 75;
 //static NSInteger const kVerticalPipeGap = 100;
 
 -(id)initWithSize:(CGSize)size {    
@@ -42,6 +42,8 @@ static NSInteger const kVerticalPipeGap = 100;
         self.physicsWorld.contactDelegate = self;
         
         _skyColor = [SKColor colorWithRed:113.0/255.0 green:197.0/255.0 blue:207.0/255.0 alpha:1.0];
+    //black sky
+      //  _skyColor = [SKColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1.0];
         [self setBackgroundColor:_skyColor];
         
         _moving = [SKNode node];
