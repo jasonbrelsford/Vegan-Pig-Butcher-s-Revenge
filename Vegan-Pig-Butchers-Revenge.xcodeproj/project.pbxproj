@@ -10,6 +10,7 @@
 		5A5D854E1BFADA5200587564 /* Bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D854C1BFADA5200587564 /* Bird1.png */; };
 		5A5D854F1BFADA5200587564 /* Bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D854D1BFADA5200587564 /* Bird2.png */; };
 		5A5D85511BFAE09400587564 /* Skyline-ribs.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D85501BFAE09400587564 /* Skyline-ribs.png */; };
+		5A5D85531BFC12E700587564 /* Bricks-6-inch.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D85521BFC12E700587564 /* Bricks-6-inch.png */; };
 		5AD6735D1BF43EB2000AC829 /* Bird2-old-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6735C1BF43EB2000AC829 /* Bird2-old-2.png */; };
 		5AD6735F1BF43EBE000AC829 /* Bird1-old-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6735E1BF43EBE000AC829 /* Bird1-old-1.png */; };
 		5AD673611BF44A6F000AC829 /* Pipe1bak.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD673601BF44A6F000AC829 /* Pipe1bak.png */; };
@@ -63,6 +64,7 @@
 		5A5D854C1BFADA5200587564 /* Bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird1.png; sourceTree = "<group>"; };
 		5A5D854D1BFADA5200587564 /* Bird2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird2.png; sourceTree = "<group>"; };
 		5A5D85501BFAE09400587564 /* Skyline-ribs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Skyline-ribs.png"; sourceTree = "<group>"; };
+		5A5D85521BFC12E700587564 /* Bricks-6-inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bricks-6-inch.png"; sourceTree = "<group>"; };
 		5AD6735C1BF43EB2000AC829 /* Bird2-old-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bird2-old-2.png"; sourceTree = "<group>"; };
 		5AD6735E1BF43EBE000AC829 /* Bird1-old-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bird1-old-1.png"; sourceTree = "<group>"; };
 		5AD673601BF44A6F000AC829 /* Pipe1bak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipe1bak.png; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				C963401518AC39DD00F2E432 /* Skyline.png */,
 				C963401618AC39DD00F2E432 /* Ground.png */,
 				5AF8CE351BF9627500510915 /* Gameoversound-chip.caf */,
+				5A5D85521BFC12E700587564 /* Bricks-6-inch.png */,
 				5AD6735E1BF43EBE000AC829 /* Bird1-old-1.png */,
 				5A5D854C1BFADA5200587564 /* Bird1.png */,
 				5A5D854D1BFADA5200587564 /* Bird2.png */,
@@ -332,6 +335,7 @@
 				5AF8CE2A1BF7BBA600510915 /* Pipe2.png in Resources */,
 				5AFB602D1BF99F7000701FDE /* Ribs.png in Resources */,
 				5AD673611BF44A6F000AC829 /* Pipe1bak.png in Resources */,
+				5A5D85531BFC12E700587564 /* Bricks-6-inch.png in Resources */,
 				C963401718AC39DD00F2E432 /* Skyline.png in Resources */,
 				5AF8CE341BF95E0000510915 /* Gameoversound.caf in Resources */,
 				5AF8CE3B1BF9856A00510915 /* VeganPigSoundtrack.caf in Resources */,
