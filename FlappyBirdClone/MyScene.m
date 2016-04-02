@@ -7,6 +7,7 @@
     SKColor* _skyColor;
     SKTexture* _pipeTexture1;
     SKTexture* _pipeTexture2;
+    SKTexture* _knifeTexture1;
     SKTexture* _ribsTexture;
     SKAction* _movePipesAndRemove;
     SKNode* _moving;
@@ -14,6 +15,8 @@
     BOOL _canRestart;
     SKLabelNode* _scoreLabelNode;
     NSInteger _score;
+    NSInteger _distances;
+    
 }
 @end
 
@@ -23,11 +26,27 @@ static const uint32_t birdCategory = 1 << 0;
 static const uint32_t worldCategory = 1 << 1;
 static const uint32_t pipeCategory = 1 << 2;
 static const uint32_t scoreCategory = 1 << 3;
+int iphoneVerticleGap = 75;
+int ipadVerticleGap = 175;
 
 
 
-static NSInteger const kVerticalPipeGap = 75;
+//if (self = UIDevice.currentDevice().userInterfaceIdiom. = phone {
+    /* Executes when the boolean expression 1 is true */
+//    iphoneVerticleGap = verticleGap;
+//}
+//else ipadVerticleGap = verticleGap; {
+//}
+
+
+
+static NSInteger const kVerticalPipeGap = 150;
 //static NSInteger const kVerticalPipeGap = 100;
+//static NSInteger const kVerticalPipeGap = 100;
+
+
+
+
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -41,9 +60,12 @@ static NSInteger const kVerticalPipeGap = 75;
         self.physicsWorld.gravity = CGVectorMake( 0.0, -4.0 );
         self.physicsWorld.contactDelegate = self;
         
+        //old sky color
+        // _skyColor = [SKColor colorWithRed:113.0/255.0 green:197.0/255.0 blue:207.0/255.0 alpha:1.0];
+        
         _skyColor = [SKColor colorWithRed:113.0/255.0 green:197.0/255.0 blue:207.0/255.0 alpha:1.0];
     //black sky
-      //  _skyColor = [SKColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1.0];
+        _skyColor = [SKColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1.0];
         [self setBackgroundColor:_skyColor];
         
         _moving = [SKNode node];
@@ -76,7 +98,7 @@ static NSInteger const kVerticalPipeGap = 75;
 
         // Create ground
         
-        SKTexture* groundTexture = [SKTexture textureWithImageNamed:@"Ground"];
+        SKTexture* groundTexture = [SKTexture textureWithImageNamed:@"Ground-new"];
         groundTexture.filteringMode = SKTextureFilteringNearest;
         
         SKAction* moveGroundSprite = [SKAction moveByX:-groundTexture.size.width*2 y:0 duration:0.02 * groundTexture.size.width*2];
@@ -91,6 +113,25 @@ static NSInteger const kVerticalPipeGap = 75;
             [sprite runAction:moveGroundSpritesForever];
             [_moving addChild:sprite];
         }
+        
+        // Create screen top limit
+        
+        SKTexture* screentoplimitTexture = [SKTexture textureWithImageNamed:@"Ground-new"];
+        screentoplimitTexture.filteringMode = SKTextureFilteringNearest;
+        
+        SKAction* movescreentoplimitSprite = [SKAction moveByX:-screentoplimitTexture.size.width*2 y:0 duration:0.02 * screentoplimitTexture.size.width*2];
+        SKAction* resetscreentoplimitSprite = [SKAction moveByX:screentoplimitTexture.size.width*2 y:0 duration:0];
+        SKAction* movescreentoplimitSpritesForever = [SKAction repeatActionForever:[SKAction sequence:@[movescreentoplimitSprite, resetscreentoplimitSprite]]];
+        
+        for( int i = 0; i < 2 + self.frame.size.width / ( screentoplimitTexture.size.width * 2 ); ++i ) {
+            // Create the sprite
+            SKSpriteNode* sprite = [SKSpriteNode spriteNodeWithTexture:screentoplimitTexture];
+            [sprite setScale:2.0];
+            sprite.position = CGPointMake(i * sprite.size.width, sprite.size.height / 2);
+            [sprite runAction:movescreentoplimitSpritesForever];
+            [_moving addChild:sprite];
+        }
+
         
         // Create ribs
         
@@ -109,29 +150,65 @@ static NSInteger const kVerticalPipeGap = 75;
             [sprite runAction:moveribsSpritesForever];
             [_moving addChild:sprite];
         }
-
-        // Create clouds
+        // Create ribs for top
         
-        SKTexture* cloudTexture = [SKTexture textureWithImageNamed:@"Clouds"];
-        cloudTexture.filteringMode = SKTextureFilteringNearest;
+        SKTexture* topribsTexture = [SKTexture textureWithImageNamed:@"Ribs"];
+        topribsTexture.filteringMode = SKTextureFilteringNearest;
         
-        SKAction* movecloudSprite = [SKAction moveByX:-cloudTexture.size.width*2 y:0 duration:10 * cloudTexture.size.width*2];
-        SKAction* resetcloudSprite = [SKAction moveByX:cloudTexture.size.width*2 y:0 duration:0];
-        SKAction* movecloudSpritesForever = [SKAction repeatActionForever:[SKAction sequence:@[movecloudSprite, resetcloudSprite]]];
+        SKAction* movetopribsSprite = [SKAction moveByX:-topribsTexture.size.width*2 y:0 duration:0.02 * topribsTexture.size.width*2];
+        SKAction* resettopribsSprite = [SKAction moveByX:topribsTexture.size.width*2 y:0 duration:0];
+        SKAction* movetopribsSpritesForever = [SKAction repeatActionForever:[SKAction sequence:@[movetopribsSprite, resettopribsSprite]]];
         
-        for( int i = 0; i < 2 + self.frame.size.width / ( cloudTexture.size.width * 2 ); ++i ) {
-            SKSpriteNode* sprite = [SKSpriteNode spriteNodeWithTexture:cloudTexture];
+        for( int i = 0; i < 2 + self.frame.size.width / ( topribsTexture.size.width * 2 ); ++i ) {
+            // Create the sprite
+            SKSpriteNode* sprite = [SKSpriteNode spriteNodeWithTexture:topribsTexture];
             [sprite setScale:2.0];
-            sprite.zPosition = -50;
-            sprite.position = CGPointMake(i * sprite.size.width, sprite.size.height / 2 + groundTexture.size.height * 2);
-            [sprite runAction:movecloudSpritesForever];
+            sprite.position = CGPointMake(i * sprite.size.width, sprite.size.height / 2);
+            [sprite runAction:movetopribsSpritesForever];
             [_moving addChild:sprite];
         }
 
+        // Create clouds
         
-        // Create skyline
+  //      //SKTexture* cloudTexture = [SKTexture textureWithImageNamed:@"Clouds"];
+ //       SKTexture* cloudTexture = [SKTexture textureWithImageNamed:@"ribs"];
+  //      cloudTexture.filteringMode = SKTextureFilteringNearest;
+  
+ //       SKAction* movecloudSprite = [SKAction moveByX:-cloudTexture.size.width*2 y:0 duration:10 * cloudTexture.size.width*2];
+ //       SKAction* resetcloudSprite = [SKAction moveByX:cloudTexture.size.width*2 y:0 duration:0];
+ //       SKAction* movecloudSpritesForever = [SKAction repeatActionForever:[SKAction sequence:@[movecloudSprite, resetcloudSprite]]];
         
-        SKTexture* skylineTexture = [SKTexture textureWithImageNamed:@"Skyline"];
+ //       for( int i = 0; i < 2 + self.frame.size.width / ( cloudTexture.size.width * 2 ); ++i ) {
+ //           SKSpriteNode* sprite = [SKSpriteNode spriteNodeWithTexture:cloudTexture];
+  //          [sprite setScale:2.0];
+  //          sprite.zPosition = -100;
+  //          sprite.position = CGPointMake(i * sprite.size.width, sprite.size.height / 2 + groundTexture.size.height * 2);
+ //           [sprite runAction:movecloudSpritesForever];
+ //           [_moving addChild:sprite];
+ //       }
+        
+        // Create ribs originally from clouds
+        
+        SKTexture* wallTexture = [SKTexture textureWithImageNamed:@"Ribs"];
+        wallTexture.filteringMode = SKTextureFilteringNearest;
+        
+        SKAction* movewallSprite = [SKAction moveByX:-wallTexture.size.width*2 y:0 duration:10 * wallTexture.size.width*2];
+        SKAction* resetwallSprite = [SKAction moveByX:wallTexture.size.width*2 y:0 duration:0];
+        SKAction* movewallSpritesForever = [SKAction repeatActionForever:[SKAction sequence:@[movewallSprite, resetwallSprite]]];
+        
+       for( int i = 0; i < 2 + self.frame.size.width / ( wallTexture.size.width * 2 ); ++i ) {
+            SKSpriteNode* sprite = [SKSpriteNode spriteNodeWithTexture:wallTexture];
+            [sprite setScale:2.0];
+            sprite.zPosition = -10;
+            sprite.position = CGPointMake(i * sprite.size.width, sprite.size.height / 2 + groundTexture.size.height * 2);
+            [sprite runAction:movewallSpritesForever];
+            [_moving addChild:sprite];
+        }
+        
+        // Create Ribs Trippy - originally skyline
+        
+        //SKTexture* skylineTexture = [SKTexture textureWithImageNamed:@"Skyline"];
+        SKTexture* skylineTexture = [SKTexture textureWithImageNamed:@"Ribs"];
         skylineTexture.filteringMode = SKTextureFilteringNearest;
         
         SKAction* moveSkylineSprite = [SKAction moveByX:-skylineTexture.size.width*2 y:0 duration:0.1 * skylineTexture.size.width*2];
@@ -141,7 +218,7 @@ static NSInteger const kVerticalPipeGap = 75;
         for( int i = 0; i < 2 + self.frame.size.width / ( skylineTexture.size.width * 2 ); ++i ) {
             SKSpriteNode* sprite = [SKSpriteNode spriteNodeWithTexture:skylineTexture];
             [sprite setScale:2.0];
-            sprite.zPosition = 98;
+            sprite.zPosition = -10;
             sprite.position = CGPointMake(i * sprite.size.width, sprite.size.height / 2 + groundTexture.size.height * 2);
             [sprite runAction:moveSkylineSpritesForever];
             [_moving addChild:sprite];
@@ -158,9 +235,9 @@ static NSInteger const kVerticalPipeGap = 75;
         
         // Create pipes
         
-        _pipeTexture1 = [SKTexture textureWithImageNamed:@"Pipe1"];
+        _pipeTexture1 = [SKTexture textureWithImageNamed:@"PipeLow2"];
         _pipeTexture1.filteringMode = SKTextureFilteringNearest;
-        _pipeTexture2 = [SKTexture textureWithImageNamed:@"Pipe2"];
+        _pipeTexture2 = [SKTexture textureWithImageNamed:@"PipeHigh"];
         _pipeTexture2.filteringMode = SKTextureFilteringNearest;
         
         CGFloat distanceToMove = self.frame.size.width + 2 * _pipeTexture1.size.width;
@@ -190,8 +267,13 @@ static NSInteger const kVerticalPipeGap = 75;
     SKNode* pipePair = [SKNode node];
     pipePair.position = CGPointMake( self.frame.size.width + _pipeTexture1.size.width, 0 );
     pipePair.zPosition = -10;
+    //spawn knife
+  //  SKNode* knifePair = [SKNode node];
+ //   knifePair.position = CGPointMake( self.frame.size.width + _pipeTexture1.size.width, 0 );
+ //   knifePair.zPosition = -20;
     
     CGFloat y = arc4random() % (NSInteger)( self.frame.size.height / 3 );
+   
     
     SKSpriteNode *pipe1 = [SKSpriteNode spriteNodeWithTexture:_pipeTexture1];
     [pipe1 setScale:2];
@@ -211,6 +293,7 @@ static NSInteger const kVerticalPipeGap = 75;
     pipe2.physicsBody.dynamic = NO;
     pipe2.physicsBody.categoryBitMask = pipeCategory;
     pipe2.physicsBody.contactTestBitMask = birdCategory;
+    
     [pipePair addChild:pipe2];
     
     SKNode* contactNode = [SKNode node];
@@ -220,9 +303,10 @@ static NSInteger const kVerticalPipeGap = 75;
     contactNode.physicsBody.categoryBitMask = scoreCategory;
     contactNode.physicsBody.contactTestBitMask = birdCategory;
     [pipePair addChild:contactNode];
+    
 
     [pipePair runAction:_movePipesAndRemove];
-    
+
     [_pipes addChild:pipePair];
 }
 
